@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(https://media4.giphy.com/media/26BRGoqbUQvk8nwTC/giphy.gif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#app {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+input, button {
+    margin-top: 10px;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+}
+
+#lists {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: white; /* Set text color for list items */
+}
+
+.container {
+    background-color: rgba(60, 60, 60, 0.75);
+    border-style: solid;
+    padding: 5px;
+    text-align: center;
+    border-width: 5px;
+    border-color: rgb(133, 133, 243);
+}
+
+.container2 {
+    background-color: rgba(60, 60, 60, 0.75);
+    border-style: solid;
+    padding: 5px;
+    text-align: center;
+    border-width: 5px;
+    border-color: rgb(133, 133, 243);
+    position: relative;
+    top: 15px;
+}
+
+/* Adjust the style for list items and checkboxes */
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+li input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Style for the form box and button */
+.form-container {
+    display: inline-block;
+    width: 60%;
+    margin-right: 10px;
+}
+
+.form-container input {
+    width: 100%;
+}
+
+.form-container button {
+    width: auto;
+    display: inline-block;
+}
