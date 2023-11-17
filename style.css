@@ -36,6 +36,9 @@ border-bottom-width: 15px;
 position: relative;
 top: 80px;
 margin-right: 400px;
+justify-content: left;
+flex-direction: column;
+display: flex;
 
 }
 
@@ -90,3 +93,4 @@ margin-right: 400px;
   .btn3:hover::before,.btn4:hover::before{
     height: 0%;
   }
+ 

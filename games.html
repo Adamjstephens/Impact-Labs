@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tasks.css">
+    <section class="Banner" >
+        <a href="index.html">Impact Labs Playtester's Log</a>
+    
     <title>Game To-Do List</title>
+    </section>
+    
 </head>
 <body>
     <div id="app">
         <div class="container">
-        <h1>Game To-Do List</h1>
+            <h1>Game To-Do List</h1>
         </div>
 
         <div class="container2">
-        <input type="text" id="gameName" placeholder="Enter game name">
-        <button onclick="generateList()">Generate To-Do List</button>
-        <div id="lists"></div>
-        <button onclick="removeAllLists()">Remove All Lists</button>
+            <input type="text" id="gameName" placeholder="Enter game name">
+            <button class= "btn btn1" onclick="generateList()">Generate To-Do List</button>
+            <div id="lists"></div>
+            <button onclick="removeAllLists()">Remove All Lists</button>
+        </div>
     </div>
 
     <script src="app.js"></script>
