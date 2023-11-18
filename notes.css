@@ -37,6 +37,8 @@ body {
     border-width: 2px;
 }
 
+
+
 footer {
     text-align: center;
     padding: 10px;
@@ -55,25 +57,69 @@ footer a:hover {
     text-decoration: underline;
 }
 
-.container1 {
-    justify-content: center;
-    height: fit-content;
-    border-style: groove;
-    text-align: center;
-    margin: 80px auto; /* Center horizontally and add top margin */
-    background-color: antiquewhite;
-    border-width: 15px;
-    border-color: #000000;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.container1
+{
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  border-style: groove;
+text-align: center;
+margin: 80px;
+background-color: antiquewhite;
+border-width: 15px;
+border-color: #000000;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+pos
+}
+.Banner a {
+  text-decoration: none; 
+  color: inherit; 
+  justify-content: center;
+  position: relative;
+  top: 15px;
+}
+/* Your existing styles here */
+
+#commentList {
+    list-style: none;
+    padding: 0;
 }
 
-.Banner a {
-    text-decoration: none;
-    color: inherit;
-    justify-content: center;
-    position: relative;
-    top: 15px;
+.commentEntry {
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
 }
+
+.removeButton {
+    cursor: pointer;
+    color: #3498db;
+}
+
+/* Your existing styles here */
+
+#commentList {
+    list-style: none;
+    padding: 0;
+}
+
+.commentEntry {
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 10px;
+    word-wrap: break-word; /* Ensures no overflow */
+    display: flex;
+    justify-content: space-between;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
+.removeButton {
+    cursor: pointer;
+    color: #3498db;
+}
+
+/* Your existing styles here */
 
 #commentList {
     list-style: none;
