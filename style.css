@@ -33,7 +33,7 @@ body {
     padding: 50px 20px;
     overflow: hidden;
     position: relative;
-    top: 150px;
+    top: 110px;
     border-width: 2px;
 }
 
@@ -107,6 +107,10 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    color: #3498db;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 footer a {
