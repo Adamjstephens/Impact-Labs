@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    image-resolution: 1920px;
+    background-image: url(images/backing2.jpg);
+}
+
+.Banner {
+    background-color: rgba(180, 174, 174, 0.75);
+    margin: 0;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    color: rgb(255, 251, 251);
+    padding: 8px;
+    border-style: solid;
+    border-bottom-width: 5px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3oda1YUjH5fqPAt1K34KtR9B58O2YDtF7oyL8J_ZryZ7PlaT1D3HQ89W1g_VacMDEtds&usqp=CAU);
+    padding-bottom: 8px;
+}
+
+.Buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    overflow: hidden;
+    position: relative;
+    top: 150px;
+    border-width: 2px;
+}
+
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000000;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.container1
+{
+  justify-content: center;
+  height: fit-content;
+  width: fit-content;
+  border-style: groove;
+text-align: center;
+margin: 80px;
+background-color: antiquewhite;
+border-width: 15px;
+border-color: #000000;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+pos
+}
+.Banner a {
+  text-decoration: none; 
+  color: inherit; 
+  justify-content: center;
+  position: relative;
+  top: 15px;
+}
+/* Your existing styles here */
+
+#commentList {
+    list-style: none;
+    padding: 0;
+}
+
+.commentEntry {
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.removeButton {
+    cursor: pointer;
+    color: #3498db;
+}
+
+/* Your existing styles here */
+
+#commentList {
+    list-style: none;
+    padding: 0;
+}
+
+.commentEntry {
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 10px;
+    word-wrap: break-word; /* Ensures no overflow */
+    display: flex;
+    justify-content: space-between;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+
+.removeButton {
+    cursor: pointer;
+    color: #3498db;
+}
+
+/* Your existing styles here */
+
+#commentList {
+    list-style: none;
+    padding: 0;
+}
+
+.commentEntry {
+    border: 1px solid #000;
+    margin: 10px;
+    padding: 10px;
+    word-wrap: break-word; /* Ensures no overflow */
+    display: flex;
+    justify-content: space-between;
+max-width: 300px;
+overflow: hidden;
+border-width: auto;
+
+
+.removeButton {
+    cursor: pointer;
+    color: #3498db;
+}

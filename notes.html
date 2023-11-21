@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="notes.css">
+    <title>Game Comments</title>
+</head>
+<body>
+    <section class="Banner">
+        <p>Impact Labs Playtester's Notes</p>
+    </section>
+
+    <div class="container1">
+        <h2>Game Comments</h2>
+        <form id="commentForm">
+            <label for="gameName">Game Name:</label>
+            <input type="text" id="gameName" required>
+
+            <label for="comment">Comment:</label>
+            <textarea id="comment" required></textarea>
+
+            <button type="button" onclick="addComment()">Add Comment</button>
+        </form>
+
+        <ul id="commentList"></ul>
+    </div>
+
+    <footer>
+        <a href="index.html">Home</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+<script>
+    function addComment() {
+    var gameName = document.getElementById("gameName").value;
+    var comment = document.getElementById("comment").value;
+
+    if (gameName && comment) {
+        var commentList = document.getElementById("commentList");
+
+        var listItem = document.createElement("li");
+        listItem.className = "commentEntry";
+
+        var commentText = document.createElement("span");
+        commentText.textContent = `${gameName}: ${comment}`;
+
+        var removeButton = document.createElement("span");
+        removeButton.className = "removeButton";
+        removeButton.textContent = "Remove";
+        removeButton.onclick = function () {
+            commentList.removeChild(listItem);
+        };
+
+        listItem.appendChild(commentText);
+        listItem.appendChild(removeButton);
+
+        commentList.appendChild(listItem);
+
+        // Clear input fields
+        document.getElementById("gameName").value = "";
+        document.getElementById("comment").value = "";
+    }
+}
+// Retrieve comments from local storage on page load
+window.onload = function () {
+    var storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+    var commentList = document.getElementById("commentList");
+
+    storedComments.forEach(function (comment) {
+        addCommentToUI(commentList, comment.gameName, comment.comment);
+    });
+};
+
+function addComment() {
+    var gameName = document.getElementById("gameName").value;
+    var commentText = document.getElementById("comment").value;
+
+    if (gameName && commentText) {
+        var commentList = document.getElementById("commentList");
+
+        // Add comment to the UI
+        addCommentToUI(commentList, gameName, commentText);
+
+        // Save comments to local storage
+        saveCommentsToLocalStorage(gameName, commentText);
+
+        // Clear input fields
+        document.getElementById("gameName").value = "";
+        document.getElementById("comment").value = "";
+    }
+}
+
+function addCommentToUI(commentList, gameName, commentText) {
+    var listItem = document.createElement("li");
+    listItem.className = "commentEntry";
+
+    var commentTextElement = document.createElement("span");
+    commentTextElement.textContent = `${gameName}: ${commentText}`;
+
+    var removeButton = document.createElement("span");
+    removeButton.className = "removeButton";
+    removeButton.textContent = "Remove";
+    removeButton.onclick = function () {
+        commentList.removeChild(listItem);
+        // Remove comment from local storage
+        removeCommentFromLocalStorage(gameName, commentText);
+    };
+
+    listItem.appendChild(commentTextElement);
+    listItem.appendChild(removeButton);
+
+    commentList.appendChild(listItem);
+}
+
+function saveCommentsToLocalStorage(gameName, commentText) {
+    var storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+    storedComments.push({ gameName: gameName, comment: commentText });
+    localStorage.setItem("comments", JSON.stringify(storedComments));
+}
+
+function removeCommentFromLocalStorage(gameName, commentText) {
+    var storedComments = JSON.parse(localStorage.getItem("comments")) || [];
+    var updatedComments = storedComments.filter(function (comment) {
+        return !(comment.gameName === gameName && comment.comment === commentText);
+    });
+    localStorage.setItem("comments", JSON.stringify(updatedComments));
+}
+
+
+</script>
+</html>
