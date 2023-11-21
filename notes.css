@@ -133,7 +133,10 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
     word-wrap: break-word; /* Ensures no overflow */
     display: flex;
     justify-content: space-between;
-}
+max-width: 300px;
+overflow: hidden;
+border-width: auto;
+
 
 .removeButton {
     cursor: pointer;

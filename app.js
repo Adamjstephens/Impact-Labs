@@ -95,3 +95,12 @@ function removeList(listId) {
     document.getElementById("lists").innerHTML = ""; // Clear existing lists
     loadLists(); // Reload the lists after removal
 }
+function removeAllLists() {
+    localStorage.removeItem("lists");
+    
+    // Clear existing lists by removing child elements
+    const listsContainer = document.getElementById("lists");
+    while (listsContainer.firstChild) {
+        listsContainer.removeChild(listsContainer.firstChild);
+    }
+}
